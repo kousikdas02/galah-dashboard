@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 
+    font family used -
+    font-family: "Raleway", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
+
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    font-weight: normal;
+    font-style: normal;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+    outline: none !important;
+    color: #ecb61e;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+::-webkit-input-placeholder {
+    opacity: 1;
+    color: #8A99A5;
+}
+
+:-ms-input-placeholder {
+    opacity: 1;
+    color: #8A99A5;
+}
+
+::-moz-placeholder {
+    opacity: 1;
+    color: #8A99A5;
+}
+
+:-moz-placeholder {
+    opacity: 1;
+    color: #8A99A5;
+}
+
+.loginWrap{
+    max-width: 762px;
+    margin: 0 auto;
+    padding: 125px 0;
+}
+
+.loginLogo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.loginForm{
+    max-width: 486px;
+    margin: 0 auto;
+}
+
+.loginForm_top{
+    margin-bottom: 50px;
+    text-align: center;
+}
+.loginForm_top h1{
+    font-size: 42px;
+    font-weight: bold;
+    color: #171717;
+    margin-bottom: 6px;
+}
+.loginForm_top p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #8998A5;
+}
+
+/* custom checkbox */
+.form_input_check label {
+    position: relative;
+    margin: 0;
+    padding-left: 27px;
+    height: 22px;
+    display: inline-block;
+    margin-bottom: 0 !important;
+}
+
+.form_input_check label span {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    color: #171717;
+}
+
+.form_input_check label input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
+
+.form_input_check label input[type="checkbox"]+span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 22px;
+    height: 22px;
+    background: url(assets/images/loginUnchecked.svg) no-repeat center center;
+    background-size: 21px;
+}
+
+.form_input_check label input[type="checkbox"]+span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 22px;
+    height: 22px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    background: url(assets/images/loginChecked.svg) no-repeat center center;
+    background-size: 21px;
+}
+
+.form_input_check label input[type="checkbox"]:not(:checked)+span::after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+
+/* .form_input_check input[type="checkbox"]:checked + span::before {
+      
+    } */
+
+.form_input_check label input[type="checkbox"]:checked+span:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.loginForm_group{
+    margin-bottom: 20px;
+}
+
+.loginForm_group label{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 5px;
+}
+.loginForm_group input{
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+    color: #000000;
+    background: #F9FAFA;
+    border-radius: 8px;
+    border: 0;
+    outline: 0;
+    padding: 10px 16px;
+    height: 50px;
+}
+
+.loginForm_group.loginForm_password_group{
+margin-bottom: 11px;
+}
+
+.loginForm_submit{
+    padding-top: 20px;
+
+}
+.loginForm_submit button{
+    width: 100%;
+    border-radius: 8px;
+    background: #E62F74;
+    font-size: 20px;
+    font-weight: bold;
+    border: 0;
+    color: #ffffff;
+    border: 1px solid #E62F74;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.loginForm_submit button:hover{
+    background: transparent;
+    color: #E62F74;
+}
+
+
+.loginConcent{
+    padding: 50px 0 60px;
+}
+.loginConcent p{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #8998A5;
+}
+.loginFooter{
+    text-align: center;
+}
+.loginFooter p{
+margin-bottom: 10px;
+font-size: 16px;
+font-weight: 400;
+color: #616161;
+}
+.loginFooter a{
+    width: 191px;
+    display: inline-block;
+}
+.loginForm_password{
+    position: relative;
+}
+.passWordEye{
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: 0;
+    background: 0;
+    padding: 0;
+}
