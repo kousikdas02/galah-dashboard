@@ -997,6 +997,31 @@ margin: 0;
 .dt-paging{
     padding-top: 10px;
 }
+
+
+/* scrollbar design */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px #fff;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E42C73;
+  border-radius: 10px;
+  transition: 0.3s all ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #E42C73;
+}
 /* ========== responsive css =========== */
 
 
@@ -1019,6 +1044,22 @@ margin: 0;
         flex-basis: calc(100% - 300px);
         margin-left: 300px;
         
+    }
+    .dashboardMenu ul li a i{
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+    }
+    .dashboardMenu ul li a i svg{
+        width: 25px;
+        height: 25px;
+    }
+    .dashboardMenu ul li a{
+        padding: 0 20px 0 25px;
+    }
+    .dashboardMenu ul li a.active::before{
+        width: 15px;
+        height: 20px;
     }
 }
 @media(max-width:1199px) {}
