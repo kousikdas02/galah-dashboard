@@ -394,6 +394,7 @@ input[type="submit"]:hover {
 .profileDowndownBtn .userImg {
     display: flex;
     width: 50px;
+    min-width: 50px;
     height: 50px;
     border-radius: 100%;
     overflow: hidden;
@@ -486,6 +487,7 @@ input[type="submit"]:hover {
 .analyticsCard_top .analyticsLink {
     margin-left: 10px;
     width: 50px;
+    min-width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -507,6 +509,7 @@ input[type="submit"]:hover {
     font-size: 22px;
     font-weight: 500;
     color: #000000;
+    padding-right: 15px;
 }
 
 .analyticsCard:hover h5 {
@@ -696,6 +699,7 @@ input[type="submit"]:hover {
     background-size: 11px;
     height: 11px;
     width: 11px;
+    margin-left: 15px;
 }
 
 .cmnBanner {
@@ -931,18 +935,24 @@ margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 -15px 30px;
+    flex-wrap: wrap;
+    margin: 0 -15px 15px;
 }
 .tableHeader > * {
     padding: 0 15px;
+    margin-bottom: 15px;
 }
 .tableHeader_left{
     display: flex;
     align-items: center;
-    margin: 0 -2.5px;
+    flex-wrap: wrap;
+    margin-left: -2.5px;
+    margin-right: -2.5px;
+    margin-bottom: 0;
 }
 .tableHeader_left > * {
     padding: 0 2.5px;
+    margin-bottom: 15px;
 }
 .tableActionDropdown .tableActionDropdownBtn{
     background-color: #F5F6FA;
@@ -989,6 +999,7 @@ margin: 0;
     font-size: 16px;
     font-weight: 600;
     padding-right: 15px;
+    white-space: nowrap;
 }
 .tableSearch input{
     width: 232px;
@@ -1035,6 +1046,21 @@ margin: 0;
 .tableSelectAll .form_input_check label input[type="checkbox"]+span::after{
     top: 2px;
 }
+.dashboardTogglerBtn{
+    display: none;
+}
+.sidebarCloseBtn{
+    display: none;
+}
+.headerLogoMobile{
+    display: none;
+}
+.bottomCards_col{
+    margin-bottom: 30px;
+}
+.bottomCards_row{
+    margin-bottom: -30px;
+}
 /* ========== responsive css =========== */
 
 
@@ -1074,8 +1100,134 @@ margin: 0;
         width: 15px;
         height: 20px;
     }
+    .cmnBanner .bannerBg{
+        width: 30%;
+        top: initial;
+        bottom: 0;
+    }
 }
-@media(max-width:1199px) {}
+@media(max-width:1199px) {
+    .headerLogo{
+        display: none;
+    }
+    .dashboardTogglerBtn{
+        display: inline-block;
+        width: 30px;
+    }
+    
+    .sidebar{
+        background: #fff;
+        position: fixed;
+        top: 0;
+        height: 100% !important; 
+        width: 290px;
+        overflow-y: auto;
+        transition: inherit !important;
+        left: 0;
+        margin: 0;
+        display: block !important;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -webkit-transition: transform 0.2s ease-in-out !important;
+        transition: transform 0.2s ease-in-out !important;
+        z-index: 100;
+        padding: 60px 0 50px;
+    }
+    
+    .openSidebar .sidebar{
+        display: block !important;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: transform 0.2s ease-in-out !important;
+        transition: transform 0.2s ease-in-out !important;
+    }
+    
+    .sidebarOverlay{
+        display: block;
+        pointer-events: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        margin: 0;
+        padding: 0 !important;
+        z-index: 99;
+        -webkit-transition: background-color 0.5s linear;
+        transition: background-color 0.5s linear;
+    }
+    .openSidebar .sidebarOverlay{
+        background-color: rgba(0,0,0,0.4);
+        pointer-events: all;
+        -webkit-transition: background-color 0.5s linear;
+        transition: background-color 0.5s linear;
+    }
+    .rightMain {
+        width: 100%;
+        flex-basis: 100%;
+        margin-left: 0;
+        padding: 30px 25px 50px;
+    }
+    .sidebarCloseBtn{
+        display: inline-flex;
+        width: 17px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .dahboardLogo a {
+        width: 150px;
+    }
+    .dahboardLogo {
+        padding: 0 32px 50px;
+    }
+    .sidebarBot {
+        padding: 100px 20px 0;
+    }
+    .headerLogoMobile {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 30px;
+    }
+    .cmnDashboardTitle{
+        padding-top: 25px;
+    }
+    .analyticsNumer{
+        font-size: 50px;
+    }
+    .cmnCardTop_left h2 {
+        font-size: 25px;
+    }
+    .cmnCardTop_left p {
+        font-size: 14px;
+    }
+
+    .cmnDashboardTitle h1 {
+        font-size: 25px;
+        
+    }
+    .analyticsCard_top{
+        margin-bottom: 25px;
+    }
+    .cmnBanner .bannerBg{
+        width: 20%;
+        height: auto;
+    }
+    .cmnBanner h2{
+        font-size: 30px;
+    }
+    .cmntableWrap{
+        padding: 20px;
+    }
+    .cmnBanner{
+        padding: 30px 20px;
+    }
+}
 
 @media(max-width:1024px) {
 
@@ -1086,20 +1238,125 @@ margin: 0;
 
 
 @media (max-width: 991px) {
+    .cmnBanner h2 {
+        font-size: 25px;
+    }
 
-   
+    .tableCartActions .cmnBtnSm{
+        font-size: 16px;
+    }
 
-
-
-
-
+    body{
+        font-size: 16px;
+    }
+    
 }
 
 @media (max-width: 767px) {
-
-
+    .cmnDashboardTitle{
+        margin-bottom: 30px;
+    }
+    .rightMain{
+        padding: 25px 15px 40px;
+    }
+    .analyticsCard{
+        padding: 20px;
+    }
+    .analyticsNumer {
+        font-size: 40px;
+    }
+    .analyticsNumer_wrap .cmnBtnSm {
+        margin-top: 10px;
+    }
+    .analyticsCard_top h5{
+        font-size: 20px;
+    }
+    .cmnCard{
+        padding: 20px;
+    }
+    .cmnCardTop{
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+    .cmnCardTop_left{
+        width: 100%;
+        flex-basis: 100%;
+        padding-right: 0;
+    }
+    .cmnCardTop_right{
+        margin-bottom: 20px;
+        width: 60px;
+        flex-basis: 60px;
+    }
+    .cmnCardTop_left h2 {
+        font-size: 22px;
+    }
+    .cmnCardBot {
+        padding-top: 25px;
+    }
+    .apiStatus i {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        margin-right: 10px;
+    }
+    .apiStatus p {
+        font-size: 18px;
+    }
+    .accordion-button{
+        padding: 20px 15px 12px;
+        font-size: 17px;
+    }
+    .accordion-body{
+        padding: 0 15px 20px;
+    }
+    .accordion-body{
+        font-size: 17px;
+    }
+    .profileDowndownBtn .userName {
+        padding: 0 12px 0 12px;
+        line-height: 1;
+    }
+    .profileDowndownBtn .userImg {
+        width: 45px;
+        min-width: 45px;
+        height: 45px;
+    }
+    .notificationDowndownBtn{
+        height: 45px;
+        width: 45px;
+    }
+    .notificationDropdown_Wrap {
+        margin-right: 15px;
+    }
+    .notificationDowndownBtn .notificationActive{
+        right: 15px;
+        top: 12px;
+    }
+    .tableSearch input{
+        width: 100%;
+    }
+    .tableActionDropdown .tableActionDropdownBtn{
+        font-size: 16px;
+    }
+    .tableSubmitBtn_wrap .tableSubmitBtn{
+        font-size: 16px;
+    }
+    .cmnTable_table tr td{
+        padding: 15px 30px !important;
+    }
+    .cmnTable_table tr th{
+        padding: 18px 30px !important;
+    }
+    .cmnBanner h2 {
+        font-size: 22px;
+    }
 }
 
 @media (max-width: 575px) {}
 
-@media (max-width: 479px) {}
+@media (max-width: 479px) {
+    .cmnBanner .bannerBg {
+        width: 30%;
+    }
+}

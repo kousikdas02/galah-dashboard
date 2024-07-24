@@ -56,6 +56,9 @@ a {
     color: #8A99A5;
 }
 
+.loginContainer{
+    padding: 0 25px;
+}
 .loginWrap{
     max-width: 762px;
     margin: 0 auto;
@@ -65,7 +68,7 @@ a {
 .loginLogo{
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .loginForm{
@@ -74,7 +77,7 @@ a {
 }
 
 .loginForm_top{
-    margin-bottom: 45px;
+    margin-bottom: 35px;
     text-align: center;
 }
 .loginForm_top h1{
@@ -156,8 +159,7 @@ a {
 
 .loginForm_group{
     margin-bottom: 20px;
-    display: flex;
-    align-items: center;
+    
 }
 
 .loginForm_group label{
@@ -165,8 +167,7 @@ a {
     font-size: 16px;
     font-weight: 600;
     color: #000000;
-    margin-right: 10px;
-    white-space: nowrap;
+    margin-bottom: 5px;
 }
 .loginForm_group input{
     width: 100%;
@@ -180,7 +181,6 @@ a {
     outline: 0;
     padding: 10px 16px;
     height: 50px;
-
 }
 .loginForm_password{
     width: 100%;
@@ -193,7 +193,7 @@ margin-bottom: 11px;
 }
 
 .loginForm_submit{
-    padding-top: 20px;
+    padding-top: 10px;
 
 }
 .loginForm_submit button{
@@ -257,4 +257,36 @@ color: #616161;
     border: 0;
     background: 0;
     padding: 0;
+}
+
+
+/* responsive css */
+@media(max-width:1199px) {
+    .loginForm_top h1{
+        font-size: 35px;
+    }
+    .loginLogo img{
+        width: 160px;
+    }
+}
+@media (max-width: 767px) {
+    .loginContainer{
+        padding: 0 15px;
+    }
+    .loginForm_top h1 {
+        font-size: 28px;
+    }
+    .loginLogo{
+        margin-bottom: 35px;
+    }
+    .loginForm_top {
+        margin-bottom: 30px;
+    }
+    .loginConcent {
+        padding: 30px 0;
+    }
+    .loginForm_submit button{
+        height: 48px;
+        font-size: 18px;
+    }
 }
