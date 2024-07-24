@@ -156,6 +156,8 @@ a {
 
 .loginForm_group{
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .loginForm_group label{
@@ -163,7 +165,8 @@ a {
     font-size: 16px;
     font-weight: 600;
     color: #000000;
-    margin-bottom: 5px;
+    margin-right: 10px;
+    white-space: nowrap;
 }
 .loginForm_group input{
     width: 100%;
@@ -177,8 +180,14 @@ a {
     outline: 0;
     padding: 10px 16px;
     height: 50px;
-}
 
+}
+.loginForm_password{
+    width: 100%;
+}
+.loginForm_password input{
+    padding-right: 55px;
+}
 .loginForm_group.loginForm_password_group{
 margin-bottom: 11px;
 }
