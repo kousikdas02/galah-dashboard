@@ -59,22 +59,22 @@ a {
 .loginWrap{
     max-width: 762px;
     margin: 0 auto;
-    padding: 125px 0;
+    padding: 50px 0;
 }
 
 .loginLogo{
     display: flex;
     justify-content: center;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 .loginForm{
-    max-width: 486px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
 .loginForm_top{
-    margin-bottom: 50px;
+    margin-bottom: 45px;
     text-align: center;
 }
 .loginForm_top h1{
@@ -214,13 +214,14 @@ margin-bottom: 11px;
 
 
 .loginConcent{
-    padding: 50px 0 60px;
+    padding: 40px 0 40px;
 }
 .loginConcent p{
     text-align: center;
     font-size: 14px;
     font-weight: 500;
     color: #8998A5;
+    margin-bottom: 0;
 }
 .loginFooter{
     text-align: center;
